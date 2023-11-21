@@ -9,13 +9,10 @@ import re
 import string
 
 
-data_fake=pd.read_csv(r"C:\Users\vishnu\Downloads\Fake (1).csv")
+data_fake=pd.read_csv(r"Fake (1).csv")
 
-data_true=pd.read_csv(r"C:\Users\vishnu\Downloads\True (1).csv")
+data_true=pd.read_csv(r"True (1).csv")
 
-
-data_fake.head()
-data_true.head()
 
 
 data_fake["class"]=0
@@ -42,7 +39,7 @@ data_true_manual_testing.head(10)
 
 data_merge=pd.concat([data_fake,data_true],axis=0)
 
-data_merge.head()
+
 
 data_merge.columns
 data=data_merge.drop(['title','subject','date'],axis=1)
